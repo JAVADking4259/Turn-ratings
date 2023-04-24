@@ -1,0 +1,20 @@
+{
+  "name": "turn-ratings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAVADking4259/Turn-ratings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JAVADking4259/Turn-ratings/issues"
+  },
+  "homepage": "https://github.com/JAVADking4259/Turn-ratings#readme"
+}
