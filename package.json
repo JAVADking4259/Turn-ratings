@@ -1,20 +1,33 @@
 {
-  "name": "turn-ratings",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JAVADking4259/Turn-ratings.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JAVADking4259/Turn-ratings/issues"
-  },
-  "homepage": "https://github.com/JAVADking4259/Turn-ratings#readme"
+    "name": "turn-ratings",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JAVADking4259/Turn-ratings.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JAVADking4259/Turn-ratings/issues"
+    },
+    "homepage": "https://github.com/JAVADking4259/Turn-ratings#readme",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "moment-jalaali": "^0.10.0",
+        "mongodb": "^5.3.0",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.22",
+        "uuid": "^9.0.0",
+        "yup": "^1.1.1"
+    }
 }
