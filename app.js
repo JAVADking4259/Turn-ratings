@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
+const dotenv = require('dotenv').config();
 const app = express();
 const config = require('./utils/initializer');
 const morgan = require('morgan');
@@ -43,7 +43,7 @@ if (dotenv.error) {
 config.Initialize().then(() => console.log('mongodb connected successfully'));
 
 //run server
-const port = process.env.SERVER_PORT || 5000;
+const port = process.env.SERVER_PORT||5000;
 
 app.listen(port, () => {
     console.log(`App running on port ${port}`);
