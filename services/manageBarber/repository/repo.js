@@ -4,7 +4,7 @@ async function addBarber(inputData){
     await config.mongoDB.collection('barbers').insertOne(inputData);
 };
 async function getBarbers(){
-    return await config.mongoDB.collection('barbers').find({},{projection:{description:0,prices:0,_id:0}}).toArray();
+    return await config.mongoDB.collection('barbers').find({},{projection:{description:0,_id:0}}).toArray();
 };
 async function getBarber(inputData){
     return await config.mongoDB.collection('barbers').findOne({id:inputData.id},{projection:{_id:0}})

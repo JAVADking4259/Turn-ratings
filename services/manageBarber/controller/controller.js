@@ -1,17 +1,20 @@
 const bl = require('../businnesLogic/bl');
 const uuid = require('uuid');
+const {validate} = require('../../../utils/validator');
+const { barbers } = require('../../../utils/schema');
 
 async function addBarber(req,res){
 try { 
     const {body} = req;
+    await validate(body,barbers);
     const inputData = {
         id:uuid.v4(),
         barberName:body.barberName,
         address:body.address,
+        instagramId:body.instagramId,
         photo:'http://localhost:5000/uploads',
         description:body.description,
-        prices:body.prices,
-        role:"USER"
+        role:"BARBER"
     };
     const result = await bl.addBarber(inputData);
     res.send(result);

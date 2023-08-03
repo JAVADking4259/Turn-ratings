@@ -16,4 +16,8 @@ const loginSchema = yup.object().shape({
     email: yup.string().email().required('please enter your email'),
     password: yup.string().required('please enter your password because password is required'),
 });
-module.exports = { addUserSchema, registerSchema, loginSchema };
+const barbers = yup.object().shape({
+    barberName: yup.string().required('لطفا نام پیرایشگاه خودرا وارد نمایید'),
+    address: yup.string().required('لطفا آدرس پیرایشگاه خودرا وارد نمایید')
+});
+module.exports = { addUserSchema, registerSchema, loginSchema,barbers };
