@@ -12,7 +12,7 @@ async function register(req, res) {
             id: uuid.v4(),
             fullName: body.fullName,
             password: body.password,
-            email: body.email,
+            phoneNumber:body.phoneNumber,
             createdAt: moment().format('jYYYY/jMM/jDD -- HH:mm:ss'),
             role: "USER"
         }
@@ -30,7 +30,7 @@ async function login(req, res) {
     try {
         const { body } = req;
         const inputData = {
-            email: body.email,
+            phoneNumber: body.phoneNumber,
             password: body.password
         };
         await validate(body, loginSchema)

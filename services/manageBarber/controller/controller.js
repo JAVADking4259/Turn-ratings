@@ -11,6 +11,7 @@ try {
         id:uuid.v4(),
         barberName:body.barberName,
         address:body.address,
+        phoneNumber:body.phoneNumber,
         instagramId:body.instagramId,
         photo:'http://localhost:5000/uploads',
         description:body.description,

@@ -2,7 +2,7 @@ const repository = require('../repository/repository');
 const bcrypt = require('bcryptjs');
 
 async function register(inputData) {
-    const user = await repository.findUser({ email: inputData.email });
+    const user = await repository.findUser({ phoneNumber: inputData.phoneNumber });
     if (user) {
         throw {
             status: 409,
@@ -21,7 +21,7 @@ async function register(inputData) {
 };
 async function login(inputData) {
     try {
-        const userData = await repository.findUser({ email: inputData.email });
+        const userData = await repository.findUser({ phoneNumber: inputData.phoneNumber });
         if (!userData) {
             throw {
                 message: "کاربر مورد نظر یافت نشد",
