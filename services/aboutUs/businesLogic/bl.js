@@ -1,6 +1,20 @@
-const repo = require('../repository/repo');
-const path = require('path');
+const repo = require('../repository/repository');
 
+async function aboutUs(inputData){
+    await repo.aboutUs(inputData);
+    delete inputData._id
+    return {
+        message:"success",
+        result:inputData
+    }
+};
+async function getAboutUs() {
+    const result = await repo.getAboutUs();
+    return {
+        message: 'اطلاعات کاربران با موفقیت دریافت شد',
+        result
+    }
+};
 async function uploadPhoto(req){
     const fileName = `${req.file.filename}`;
     const inputData = {
@@ -20,7 +34,5 @@ async function deletePhoto(inputData){
         message: 'عکس پروفایل با موفقیت حذف شد',
     }
 
-}
-
-
-module.exports={uploadPhoto,deletePhoto};
+};
+module.exports={aboutUs,getAboutUs,uploadPhoto,deletePhoto};
